@@ -1,0 +1,123 @@
+html,body{
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 150vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns:1fr 9fr;
+    grid-template-rows: 350px 1000px;
+    grid-template-areas:"menu conteudo"
+                        "menu informaçao";
+    
+}
+
+.menu{
+    position: absolute;
+    width: 8%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(180deg, #FE5B00 0%, #FFBD98 97.92%);
+
+}
+
+.conteudo{
+
+    position: absolute;
+    left: 8%;
+    right: -3.9%;
+    top: -0.2%;
+    height: 50%;
+    width: 92%;
+    background-color: #173455;
+}
+
+.informaçao{
+
+    position: absolute;
+
+    left: 8%;
+
+    right: -3.9%;
+
+    top: 49%;
+    width: 92%;
+    bottom: -0.2%;
+
+    height: 51%;
+
+    background-color: lightgray;
+
+}
+
+#img_menina {
+    height: 100%;
+    margin-left: 150px;
+}
+
+#imgmenu2 {
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    margin-left: 26%;
+    margin-top: 24%;
+}
+
+label {
+    display: block;
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input,label {
+    margin: .4rem 0;
+}
+
+#hora{
+    margin-left: 500px;
+
+}
+
+#data{
+    margin-top: 205px;
+    margin-left: 485px;
+
+}
+
+#imgmenu {
+    width: 50px;
+    height: 50px;
+    align-items: center;
+    margin-left: 25%;
+    margin-top: 24%;
+}
+
+#menu1{
+    margin-left: 2px;
+    list-style: none;
+    align-items: center;
+
+}
+
+li:hover {
+    background-color: #FFBD98;
+}
+
+#imgmenu1 {
+    width: 80px;
+    height: 50px;
+    align-items: center;
+    margin-left: 12%;
+    margin-top: 24%;
+}
+
+#logo {
+    margin-top: 190%;
+    height: 90px;
+    width: 100px;
+}
+
+
+

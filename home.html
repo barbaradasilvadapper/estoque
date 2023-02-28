@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="HOMEPAGE/stylehome.css"> 
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>HOMEPAGE</title>
+</head>
+<body>
+
+    <div class="menu">
+        <div id="menu1"> 
+            <li> <a href="home.html"><img id="imgmenu" src="img/home.png"></a></li> 
+            <li> <a href="insert.html"><img id="imgmenu" src="img/edit.png"></a></li> 
+            <li> <a href="search.html"><img id="imgmenu1" src="img/search.png"></a></li> 
+            <li> <a href="login.html"> <img id="imgmenu2" src="img/saida.png"> </a></li>
+            <img id="logo" src="img/logo.png" alt="logo senac">
+          </div>
+    </div>
+        <div class="conteudo"> <img id="img_menina" src="HOMEPAGE/img/menina.png"></div>
+        <div class="informaçao">
+            <div>
+                <output id="data" style="font-family: 'arial black', 'avant garde'; font-size: 24px;"></output>
+            </div>
+            <div>
+                <output id="hora" style="font-family: 'arial black', 'avant garde'; font-size: 24px;"></output>				
+            </div>			
+                    
+</body>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+<script type="text/javascript">
+    jQuery(window).load(function($){
+        atualizaRelogio();
+    });
+    function atualizaRelogio(){ 
+        var momentoAtual = new Date();
+        
+        var vhora = momentoAtual.getHours();
+        var vminuto = momentoAtual.getMinutes();
+        var vsegundo = momentoAtual.getSeconds();
+        
+        var vdia = momentoAtual.getDate();
+        var vmes = momentoAtual.getMonth() + 1;
+        var vano = momentoAtual.getFullYear();
+        
+        if (vdia < 10){ vdia = "0" + vdia;}
+        if (vmes < 10){ vmes = "0" + vmes;}
+        if (vhora < 10){ vhora = "0" + vhora;}
+        if (vminuto < 10){ vminuto = "0" + vminuto;}
+        if (vsegundo < 10){ vsegundo = "0" + vsegundo;}
+
+        dataFormat = vdia + " / " + vmes + " / " + vano;
+        horaFormat = vhora + " : " + vminuto + " : " + vsegundo;
+
+        document.getElementById("data").innerHTML = dataFormat;
+        document.getElementById("hora").innerHTML = horaFormat;
+
+        setTimeout("atualizaRelogio()",1000);
+    }
+</script>
+</html>
+
